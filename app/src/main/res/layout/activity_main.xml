@@ -8,15 +8,27 @@
 
     <Button
         android:id="@+id/btnlog"
-        android:layout_width="172dp"
-        android:layout_height="53dp"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="428dp"
         android:layout_marginEnd="8dp"
         android:text="@string/btn_login_str"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnclear"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btn_clear_str"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnlog"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -28,13 +40,13 @@
         android:layout_marginBottom="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/txtpass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtpass"
         android:layout_width="275dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -70,8 +82,8 @@
         android:layout_marginEnd="196dp"
         android:layout_marginBottom="36dp"
         android:text="@string/lb_pass_str"
-        app:layout_constraintBottom_toBottomOf="@+id/editText4"
-        app:layout_constraintEnd_toEndOf="@+id/editText4" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtpass"
+        app:layout_constraintEnd_toEndOf="@+id/txtpass" />
 
     <TextView
         android:id="@+id/lbmat"
