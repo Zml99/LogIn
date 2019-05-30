@@ -18,30 +18,30 @@ public class SecondActivity extends AppCompatActivity {
 
     private ListView lv1;
 
-    public static String nombres [] = {"Miguel Ant. Linares S.", "Anthony Hernandez", "Jose Carlos Ramirez", "Eduardo Herrera"};
+   // public static String nombres [] = {"Miguel Ant. Linares S.", "Anthony Hernandez", "Jose Carlos Ramirez", "Eduardo Herrera"};
 
     public static String  selection;
 
-    private int estudiantes;
+    //private int estudiantes;
 
-    public class  estudiantes extends Activity {
-                private List<estudiantes>  myestudiantes= new ArrayList<estudiantes>();
+    //public class  estudiantes extends Activity {
+                private List<Estudiantes>  myestudiantes= new ArrayList<Estudiantes>();
 
-                @Override
-    protected void onCreate(Bundle saveInstanceState){
-                    super.onCreate(savedInstanceState);
+               // @Override
+   /* protected void onCreate(Bundle saveInstanceState){
+                    super.onCreate(saveInstanceState);
                     setContentView(R.layout.activity_second);
 
                     FotoEstudiantes();
                     FotoEstudiantesView();
-                }
-}
+                }*/
+//}
             private void FotoEstudiantes(){
 
-               adapter.add(new estudiantes("Miguel Ant. Linares S", R.drawable.foto_1));
-               adapter.add(new estudiantes("Antony Hernandez", R.drawable.foto_2));
-               adapter.add(new estudiantes("Jose Carlos Ramirez", R.drawable.foto_3));
-               adapter.add(new estudiantes("Eduardo Herrera", R.drawable.foto_4));
+                myestudiantes.add(new Estudiantes("Miguel Ant. Linares S", R.drawable.foto_1));
+                myestudiantes.add(new Estudiantes("Antony Hernandez", R.drawable.foto_2));
+                myestudiantes.add(new Estudiantes("Jose Carlos Ramirez", R.drawable.foto_3));
+                myestudiantes.add(new Estudiantes("Eduardo Herrera", R.drawable.foto_4));
             }
 
     @Override
@@ -49,9 +49,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        lv1 = (ListView)findViewById(R.id.lv1);
+        FotoEstudiantes();
 
-        final ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_names, nombres);
+        lv1 = findViewById(R.id.lv1);
+
+        final ArrayAdapter <Estudiantes> adapter = new ArrayAdapter<>(this, R.layout.list_item_names, myestudiantes);
         lv1.setAdapter(adapter);
 
         
