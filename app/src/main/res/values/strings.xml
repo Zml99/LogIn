@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LogIn</string>
+    <string name="app_name"></string>
     <string name="txt_user_str">Matrícula:</string>
     <string name="lb_pass_str">Contraseña:</string>
     <string name="img_content_string">LogoUnibe</string>
