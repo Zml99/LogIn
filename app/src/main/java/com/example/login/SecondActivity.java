@@ -28,6 +28,8 @@ public class SecondActivity extends AppCompatActivity {
         ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_names, nombres);
         lv1.setAdapter(adapter);
 
+        
+
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
