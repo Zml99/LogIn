@@ -8,4 +8,5 @@
     <string name="btn_maps_str">Mapa</string>
     <string name="btn_atras_str">Atrás</string>
     <string name="img_content_student_str">student_photo</string>
+    <string name="btn_clear_str">Clear</string>
 </resources>
