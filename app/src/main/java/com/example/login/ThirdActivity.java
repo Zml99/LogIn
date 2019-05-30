@@ -21,7 +21,7 @@ public class ThirdActivity extends AppCompatActivity {
     private EditText txtbday;
     private ImageView img_est;
 
-    private String direccion[] = {"Calle Máximo Gomez no. 5", "Calle Barcelona no. 5", "Calle Roberto Pastoriza no. 25", "Calle Puerta de Hierro no. 4"};
+    private String direccion[] = {"Calle Paseo de Madrid no. 2", "Av. México no. 24", "Calle Roberto Pastoriza no. 25", "Calle Puerta de Hierro no. 4"};
     private String profesion[] = {"Ingeniero en Sistemas", "Ingeniero Civil", "Ingeniero Industrial", "Ingeniero Electromecánico"};
 
 
@@ -84,6 +84,13 @@ public class ThirdActivity extends AppCompatActivity {
         });
 
         btn_map = (Button)findViewById(R.id.btn_map);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3 = new Intent(v.getContext(), MapActivity.class);
+                startActivityForResult(intent3, 0);
+            }
+        });
 
 
     }

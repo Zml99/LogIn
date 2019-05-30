@@ -34,7 +34,6 @@ public class SecondActivity extends AppCompatActivity {
                 Intent intent = new Intent(view.getContext(), ThirdActivity.class);
                 startActivityForResult(intent, 0);
                 selection = (String) parent.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), selection , Toast.LENGTH_LONG).show();
 
             }
         });
