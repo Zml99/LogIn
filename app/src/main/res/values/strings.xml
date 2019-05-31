@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LogIn</string>
+    <string name="app_name"></string>
     <string name="txt_user_str">Matrícula:</string>
     <string name="lb_pass_str">Contraseña:</string>
     <string name="img_content_string">LogoUnibe</string>
@@ -9,4 +9,5 @@
     <string name="btn_atras_str">Atrás</string>
     <string name="img_content_student_str">student_photo</string>
     <string name="btn_clear_str">Clear</string>
+    <string name="title_activity_map">Map</string>
 </resources>
