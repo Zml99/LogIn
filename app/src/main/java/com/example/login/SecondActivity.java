@@ -25,7 +25,7 @@ public class SecondActivity extends AppCompatActivity {
 
     //private int estudiantes;
     //public class  estudiantes extends Activity {
-                private List<Estudiantes>  myestudiantes= new ArrayList<Estudiantes>();
+                private ArrayList<Estudiantes>  myestudiantes= new ArrayList<Estudiantes>();
 
                // @Override
    /* protected void onCreate(Bundle saveInstanceState){
