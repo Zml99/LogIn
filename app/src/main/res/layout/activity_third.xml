@@ -83,32 +83,22 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="174dp"
         android:text="Mmmm"
-<<<<<<< HEAD
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-=======
-        android:textSize="20sp"
->>>>>>> master
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_est" />
 
     <ImageView
-<<<<<<< HEAD
-        android:id="@+id/imageView"
+
+        android:id="@+id/img_est"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="136dp"
-        app:layout_constraintEnd_toEndOf="parent"
-=======
-        android:id="@+id/img_est"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="28dp"
         android:scaleType="fitXY"
->>>>>>> master
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/logounibe" />

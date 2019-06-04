@@ -16,6 +16,7 @@ import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
 
+    //public static int[] nombres;
     private ListView lv1;
 
    // public static String nombres [] = {"Miguel Ant. Linares S.", "Anthony Hernandez", "Jose Carlos Ramirez", "Eduardo Herrera"};
