@@ -16,7 +16,7 @@ import java.util.List;
 
 public class SecondActivity extends AppCompatActivity {
 
-    //public static int[] nombres;
+    public static int[] nombres;
     private ListView lv1;
 
    // public static String nombres [] = {"Miguel Ant. Linares S.", "Anthony Hernandez", "Jose Carlos Ramirez", "Eduardo Herrera"};
@@ -24,7 +24,6 @@ public class SecondActivity extends AppCompatActivity {
     public static String  selection;
 
     //private int estudiantes;
-
     //public class  estudiantes extends Activity {
                 private List<Estudiantes>  myestudiantes= new ArrayList<Estudiantes>();
 
@@ -32,7 +31,6 @@ public class SecondActivity extends AppCompatActivity {
    /* protected void onCreate(Bundle saveInstanceState){
                     super.onCreate(saveInstanceState);
                     setContentView(R.layout.activity_second);
-
                     FotoEstudiantes();
                     FotoEstudiantesView();
                 }*/
@@ -54,7 +52,7 @@ public class SecondActivity extends AppCompatActivity {
 
         lv1 = findViewById(R.id.lv1);
 
-        final ArrayAdapter <Estudiantes> adapter = new ArrayAdapter<>(this, R.layout.list_item_names, myestudiantes);
+        final ArrayAdapter <Estudiantes> adapter = new ArrayAdapter<>(this, R.layout.list_view_second_act, myestudiantes);
         lv1.setAdapter(adapter);
 
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -62,7 +60,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(view.getContext(), ThirdActivity.class);
                 startActivityForResult(intent, 0);
-                selection = (String) parent.getItemAtPosition(position);
+                selection =  parent.getItemAtPosition(position).toString();
 
             }
             });
