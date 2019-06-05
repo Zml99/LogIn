@@ -38,6 +38,8 @@ public class SecondActivity extends AppCompatActivity {
 
         lv1.setAdapter(adapter);
 
+        
+
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
