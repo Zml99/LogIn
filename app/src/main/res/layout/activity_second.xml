@@ -9,21 +9,69 @@
 
     <ListView
         android:id="@+id/lv1"
-        android:layout_width="359dp"
-        android:layout_height="514dp"
+        android:layout_width="273dp"
+        android:layout_height="600dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3_foto_3"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="108dp"
         android:layout_height="28dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="68dp"
         android:text="@string/lb_estudiantes_str"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_foto_1"
+        android:layout_width="56dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="27dp"
+        app:layout_constraintEnd_toStartOf="@+id/lv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/foto_1" />
+
+    <ImageView
+        android:id="@+id/imageView2_foto_2"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintEnd_toStartOf="@+id/lv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_foto_1"
+        app:srcCompat="@drawable/foto_2" />
+
+    <ImageView
+        android:id="@+id/imageView3_foto_3"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/lv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2_foto_2"
+        app:srcCompat="@drawable/foto_3" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/lv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3_foto_3"
+        app:srcCompat="@drawable/foto_4" />
 </android.support.constraint.ConstraintLayout>
