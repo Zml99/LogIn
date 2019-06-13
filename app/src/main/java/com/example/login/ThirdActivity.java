@@ -62,7 +62,7 @@ public class ThirdActivity extends AppCompatActivity {
             txtsexo.setText("Masculino");
             txtmap.setText(direccion[2]);
             txtbday.setText("04/12/1998");
-            img_est.setImageResource(R.drawable.foto_3);
+            img_est.setImageResource(R.drawable.logan);
         }
         else if (SecondActivity.selection == "Eduardo Herrera"){
             lbname.setText(SecondActivity.nombres[3]);
