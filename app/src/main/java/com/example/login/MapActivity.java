@@ -3,7 +3,6 @@ package com.example.login;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -26,6 +25,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        /*Traigo los datos del activity 3 y los guardo en una variable para luego usarlos como
+        coordenadas.*/
         Intent inten1 = getIntent();
         Bundle b = inten1.getExtras();
 

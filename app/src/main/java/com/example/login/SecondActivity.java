@@ -1,18 +1,11 @@
 package com.example.login;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.example.login.ThirdActivity.cf;
 import static com.example.login.ThirdActivity.direccion;
@@ -27,8 +20,6 @@ public class SecondActivity extends AppCompatActivity {
     public static double cor1 [] = {18.528470, 15.0323174, 18.5272709, 18.5295363};
     public static double cor2 [] = {-69.968398, -92.104198, -69.868887, -69.9700582};
 
-    public static String  selection;
-
 
 
     @Override
@@ -36,17 +27,8 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-
-
         lv1 = findViewById(R.id.lv1);
         lv1.setAdapter(new Adaptador(this, nombres, datosImg));
-
-
-        /*ArrayAdapter <String> adapter = new ArrayAdapter<>(this, R.layout.list_item_names, nombres);
-
-        lv1.setAdapter(adapter);*/
-
-        
 
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -38,15 +38,16 @@ public class ThirdActivity extends AppCompatActivity {
 
 
 
-        lbname = (TextView)findViewById(R.id.lbname_st);
-        txtprof = (EditText)findViewById(R.id.txtname_st);
-        txtsexo = (EditText)findViewById(R.id.txtsexo_st);
-        txtmap = (EditText)findViewById(R.id.txtdir_st);
-        txtbday = (EditText)findViewById(R.id.txtcumple_st);
-        img_est = (ImageView)findViewById(R.id.img_est);
+        lbname = findViewById(R.id.lbname_st);
+        txtprof = findViewById(R.id.txtname_st);
+        txtsexo = findViewById(R.id.txtsexo_st);
+        txtmap = findViewById(R.id.txtdir_st);
+        txtbday = findViewById(R.id.txtcumple_st);
+        img_est = findViewById(R.id.img_est);
 
-        ListView names = (ListView)findViewById(R.id.lv1);
+        ListView names = findViewById(R.id.lv1);
 
+        //Se manda a traer lo que se envio del activity anterior
         Intent inten = getIntent();
         Bundle b = inten.getExtras();
         //Toast.makeText(getApplicationContext(), pos, Toast.LENGTH_SHORT).show();
@@ -61,27 +62,10 @@ public class ThirdActivity extends AppCompatActivity {
             img_est.setImageResource(b.getInt("Foto"));
             cor1 = b.getDouble("cor1");
             cor2 = b.getDouble("cor2");
-            Toast.makeText(getApplicationContext(), String.valueOf(b.getString("Nombre")), Toast.LENGTH_SHORT).show();
-
-            /*if (nombres[0] == String.valueOf(b.getString("Nombre"))){
-                posi = 0;
-            }
-
-            else if (nombres[1] == String.valueOf(b.getString("Nombre"))){
-                posi = 1;
-            }
-
-            else if (nombres[2] == String.valueOf(b.getString("nombre"))){
-                posi = 2;
-            }
-
-            else if (profesion[3] == String.valueOf(b.getString("Profesion"))){
-                posi = 3;
-            }*/
-
+            /*Toast.makeText(getApplicationContext(), String.valueOf(b.getString("Nombre")), Toast.LENGTH_SHORT).show();*/
         }
 
-        btn_atras = (Button)findViewById(R.id.btn_atras);
+        btn_atras = findViewById(R.id.btn_atras);
 
         btn_atras.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,11 +75,13 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
 
-        btn_map = (Button)findViewById(R.id.btn_map);
+        btn_map = findViewById(R.id.btn_map);
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent3 = new Intent(ThirdActivity.this, MapActivity.class);
+
+                //Con el putExtra se dice que se va a enviar al siguiente activity
                 intent3.putExtra("cor1", cor1);
                 intent3.putExtra("cur2", cor2);
                 /*Toast.makeText(getApplicationContext(), String.valueOf(cor2), Toast.LENGTH_SHORT).show();*/
