@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 if(name.equals("18-0465") && password.equals("helloworld")){
                     Intent nuevoform = new Intent(MainActivity.this, SecondActivity.class);
                     startActivityForResult(nuevoform, 0);
+                    finish();
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Matricula o Clave erronea", Toast.LENGTH_SHORT).show();

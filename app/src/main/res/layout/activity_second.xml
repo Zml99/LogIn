@@ -11,6 +11,7 @@
     <ListView
         android:id="@+id/lv1"
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -24,21 +25,30 @@
         android:layout_width="273dp"
         android:layout_height="600dp"
         android:layout_marginStart="24dp"
+=======
+        android:layout_width="349dp"
+        android:layout_height="485dp"
+        android:layout_marginStart="36dp"
+>>>>>>> origin/master
         android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView3_foto_3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.007" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="108dp"
-        android:layout_height="28dp"
+        android:layout_width="132dp"
+        android:layout_height="34dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:text="@string/lb_estudiantes_str"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/imageView_foto_1"
         android:layout_width="56dp"
@@ -87,4 +97,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3_foto_3"
         app:srcCompat="@drawable/foto_4" />
 >>>>>>> master
+=======
+>>>>>>> origin/master
 </android.support.constraint.ConstraintLayout>
