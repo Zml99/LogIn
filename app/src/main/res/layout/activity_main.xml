@@ -31,6 +31,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnlog"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/txtuser"
         android:layout_width="276dp"
@@ -94,5 +95,16 @@
         android:text="@string/txt_user_str"
         app:layout_constraintBottom_toBottomOf="@+id/txtuser"
         app:layout_constraintEnd_toEndOf="@+id/txtuser" />
+
+    <Button
+        android:id="@+id/btn_registrarse"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="124dp"
+        android:text="@string/btn_registrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>

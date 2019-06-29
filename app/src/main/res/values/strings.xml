@@ -4,6 +4,8 @@
     <string name="lb_pass_str">Contraseña:</string>
     <string name="img_content_string">LogoUnibe</string>
     <string name="btn_login_str">Log In</string>
+    <string name="btn_registrarse">Registrarse</string>
+
     <string name="lb_estudiantes_str">Estudiantes</string>
     <string name="btn_maps_str">Mapa</string>
     <string name="btn_atras_str">Atrás</string>

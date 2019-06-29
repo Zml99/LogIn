@@ -1,58 +1,95 @@
 package com.example.login;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.app.ProgressDialog;
+
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.text.TextUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     private Button clear;
     private Button login;
-    private EditText name;
-    private EditText password;
+    private Button registrarse;
+    private EditText TextEmail;
+    private EditText TextPassword;
+    private FirebaseAuth mAuth;
+    private ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mAuth = FirebaseAuth.getInstance();
+
+        TextEmail = (EditText) findViewById(R.id.txtuser);
+        TextPassword = (EditText) findViewById(R.id.txtpass);
+        registrarse = (Button)findViewById(R.id.btn_registrarse);
         login = (Button)findViewById(R.id.btnlog);
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = ((EditText) findViewById(R.id.txtuser)).getText().toString();
-                String password = ((EditText)findViewById(R.id.txtpass)).getText().toString();
-
-                if(name.equals("18-0465") && password.equals("helloworld")){
-                    Intent nuevoform = new Intent(MainActivity.this, SecondActivity.class);
-                    startActivityForResult(nuevoform, 0);
-                    finish();
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "Matricula o Clave erronea", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
         clear = (Button)findViewById(R.id.btnclear);
+
+        progressDialog = new ProgressDialog(this);
+
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name = (EditText)findViewById(R.id.txtuser);
-                password = (EditText)findViewById(R.id.txtpass);
-
-                name.getText().clear();
-                password.getText().clear();
+                TextEmail.getText().clear();
+                TextPassword.getText().clear();
             }
         });
+        registrarse.setOnClickListener(this);
+    }
 
+    private void registrarUsuarios() {
+        String email = TextEmail.getText().toString().trim();
+        String password = TextPassword.getText().toString().trim();
 
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Se debe ingresar un correo", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(), "Se debe ingresar un correo", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        progressDialog.setMessage("Realizando registro en linea...");
+        progressDialog.show();
 
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+                            Toast.makeText(MainActivity.this, "Se ha registrado el correo", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainActivity.this, "No pudo registrse el usuario", Toast.LENGTH_SHORT).show();
+                        }
+
+                        progressDialog.dismiss();
+
+                        // ...
+                    }
+                });
+    }
+
+    @Override
+    public void onClick(View v){
+        registrarUsuarios();
     }
 }
